@@ -30,11 +30,10 @@ diff --git a/include/linux/mmc/card.h b/include/linux/mmc/card.h
 index 962b3f4b3d7d..01ce5eb7eaff 100644
 --- a/include/linux/mmc/card.h
 +++ b/include/linux/mmc/card.h
-@@ -295,6 +295,7 @@ struct mmc_card {
+@@ -295,5 +295,6 @@ struct mmc_card {
  #define MMC_QUIRK_BROKEN_HPI    (1<<13)         /* Disable broken HPI support */
  #define MMC_QUIRK_BROKEN_SD_DISCARD     (1<<14) /* Disable broken SD discard support */
  #define MMC_QUIRK_BROKEN_SD_CACHE      (1<<15) /* Disable broken SD cache support */
 +#define MMC_QUIRK_NO_18V       (1<<18) /* Ignore voltage negotiation and don't use 1.8v */
 
         bool                    reenable_cmdq;  /* Re-enable Command Queue */
-
