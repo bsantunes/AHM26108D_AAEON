@@ -1,5 +1,5 @@
---- a/linux/drivers/net/wireless/morse/debug.h
-+++ b/linux/drivers/net/wireless/morse/debug.h
+--- a/linux/drivers/net/wireless/morse/morse.h
++++ b/linux/drivers/net/wireless/morse/morse.h
 @@ -10,6 +10,7 @@
  #include <linux/interrupt.h>
  #include <linux/kfifo.h>
