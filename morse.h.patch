@@ -1,0 +1,29 @@
+--- a/linux/drivers/net/wireless/morse/debug.h
++++ b/linux/drivers/net/wireless/morse/debug.h
+@@ -10,6 +10,7 @@
+ #include <linux/interrupt.h>
+ #include <linux/kfifo.h>
+ #include <linux/types.h>
++#include "morse_types.h"
+ #include <linux/version.h>
+ #include <linux/crc32.h>
+ #if KERNEL_VERSION(4, 9, 81) < LINUX_VERSION_CODE
+@@ -117,18 +118,7 @@
+  * @MORSE_CONFIG_TEST_MODE_BUS: write/read block via the bus
+  * @MORSE_CONFIG_TEST_MODE_BUS_PROFILE: measure time to perform bus operations
+  */
+-enum morse_config_test_mode {
+-	MORSE_CONFIG_TEST_MODE_DISABLED,
+-	MORSE_CONFIG_TEST_MODE_DOWNLOAD_ONLY,
+-	MORSE_CONFIG_TEST_MODE_DOWNLOAD_AND_GET_HOST_TBL_PTR,
+-	MORSE_CONFIG_TEST_MODE_GET_HOST_TBL_PTR_ONLY,
+-	MORSE_CONFIG_TEST_MODE_RESET,
+-	MORSE_CONFIG_TEST_MODE_BUS,
+-	MORSE_CONFIG_TEST_MODE_BUS_PROFILE,
+ 
+-	/* Add more test modes before this line */
+-	MORSE_CONFIG_TEST_MODE_INVALID,
+-};
+ 
+ struct morse_buff;
+ struct morse_bus_ops;

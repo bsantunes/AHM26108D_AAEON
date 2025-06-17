@@ -1,0 +1,13 @@
+--- a/linux/drivers/net/wireless/morse/debug.h
++++ b/linux/drivers/net/wireless/morse/debug.h
+@@ -151,8 +151,9 @@
+  *
+  * @returns	True if output would be generated and false otherwise.
+  */
+-bool morse_log_is_enabled(u32 id, u8 level);
+ 
++bool morse_log_is_enabled(enum morse_feature_id, u8 level);
++
+ /**
+  * Set the default logging level for all features.
+  *

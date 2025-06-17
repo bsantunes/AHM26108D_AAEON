@@ -1,0 +1,20 @@
+--- a/linux/drivers/net/wireless/morse/debug.h
++++ b/linux/drivers/net/wireless/morse/debug.h
+@@ -8,6 +8,8 @@
+ #include <linux/firmware.h>
+ #include "capabilities.h"
+ #include "misc.h"
++#include "morse_types.h"
++#include "morse.h"
+ 
+ #define BCF_DATABASE_SIZE               (1024)	/* From firmware */
+ #define MORSE_FW_DIR                    "morse"
+@@ -130,7 +132,7 @@
+ 	u8 ext_host_table_data_tlvs[];
+ } __packed;
+ 
+-int morse_firmware_init(struct morse *mors, uint test_mode);
++int morse_firmware_init(struct morse *mors, enum morse_config_test_mode test_mode);
+ 
+ /**
+  * @brief Perform non-destructive-reset of the chip,
