@@ -1,5 +1,5 @@
---- a/linux/drivers/net/wireless/morse/debug.h
-+++ b/linux/drivers/net/wireless/morse/debug.h
+--- a/linux/drivers/net/wireless/morse/firmware.h
++++ b/linux/drivers/net/wireless/morse/firmware.h
 @@ -8,6 +8,8 @@
  #include <linux/firmware.h>
  #include "capabilities.h"
