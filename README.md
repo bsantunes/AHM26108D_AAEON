@@ -21,7 +21,7 @@ Extract the driver archive:
 ```
 cd $WORKING_DIR
 curl -L -O https://github.com/bsantunes/AHM26108D/raw/refs/heads/main/morsemicro_driver_rel_1_12_4_2024_Jun_11.zip
-unzip morsemicro_driver_rel_1_11_3_2024_Mar_28.zip
+unzip morsemicro_driver_rel_1_12_4_2024_Jun_11.zip
 ```
 ## 3. Integrate the Driver into the Kernel Source
 Create the target directory
