@@ -11,7 +11,7 @@ cd linux
 ```
 Configure the kernel based on 6.80 default config:
 ```
-curl -o .config https://raw.githubusercontent.com/bsantunes/AHM26108D/refs/heads/main/config-6.8.0-60-generic 
+curl -o .config https://raw.githubusercontent.com/bsantunes/AHM26108D_AAEON/refs/heads/main/config-6.8.0-60-generic 
 yes '' | make oldconfig
 vi .config # Enable CONFIG_CRYPTO_CCM=y and CONFIG_CRYPTO_GCM=y
 make menuconfig  # Add options as needed
@@ -20,7 +20,7 @@ make menuconfig  # Add options as needed
 Extract the driver archive:
 ```
 cd $WORKING_DIR
-curl -L -O https://github.com/bsantunes/AHM26108D/raw/refs/heads/main/morsemicro_driver_rel_1_12_4_2024_Jun_11.zip
+curl -L -O https://github.com/bsantunes/AHM26108D_AAEON/raw/refs/heads/main/morsemicro_driver_rel_1_12_4_2024_Jun_11.zip
 unzip morsemicro_driver_rel_1_12_4_2024_Jun_11.zip
 ```
 ## 3. Integrate the Driver into the Kernel Source
@@ -112,9 +112,9 @@ cp 0010-sdio_18v_quirk.patch  morsemicro_kernel_patches_rel_1_12_4_2024_Jun_11/6
 cat morsemicro_kernel_patches_rel_1_12_4_2024_Jun_11/6.6.x/*.patch | patch -g0 -p1 -E -d linux/
 mkdir patches
 cd patches
-curl -L -O https://raw.githubusercontent.com/bsantunes/AHM26108D/refs/heads/main/debug.h.patch
-curl -L -O https://raw.githubusercontent.com/bsantunes/AHM26108D/refs/heads/main/firmware.h.patch
-curl -L -O https://raw.githubusercontent.com/bsantunes/AHM26108D/refs/heads/main/morse.h.patch
+curl -L -O https://raw.githubusercontent.com/bsantunes/AHM26108D_AAEON/refs/heads/main/debug.h.patch
+curl -L -O https://raw.githubusercontent.com/bsantunes/AHM26108D_AAEON/refs/heads/main/firmware.h.patch
+curl -L -O https://raw.githubusercontent.com/bsantunes/AHM26108D_AAEON/refs/heads/main/morse.h.patch
 cd ..
 patch -p1 < patches/debug.h.patch
 patch -p1 < patches/firmware.h.patch
