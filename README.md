@@ -1,5 +1,5 @@
 # AHM26108D
-Compiling instructions for kernel and driver on AEEON GENE-EHL5
+Compiling instructions for kernel and driver on AAEON GENE-EHL5
 
 ## 1. Prepare the Kernel Source
 Clone and checkout kernel 6.6:
