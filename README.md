@@ -105,9 +105,9 @@ Save and exit.
 ## 6. Apply Kernel Patches
 ```
 cd $WORKING_DIR
-curl -L -O https://github.com/bsantunes/AHM26108D/raw/refs/heads/main/morsemicro_kernel_patches_rel_1_12_4_2024_Jun_11.zip
+curl -L -O https://github.com/bsantunes/AHM26108D_AAEON/raw/refs/heads/main/morsemicro_kernel_patches_rel_1_12_4_2024_Jun_11.zip
 unzip morsemicro_kernel_patches_rel_1_12_4_2024_Jun_11.zip
-curl -L -O https://raw.githubusercontent.com/bsantunes/AHM26108D/refs/heads/main/0010-sdio_18v_quirk.patch
+curl -L -O https://raw.githubusercontent.com/bsantunes/AHM26108D_AAEON/refs/heads/main/0010-sdio_18v_quirk.patch
 cp 0010-sdio_18v_quirk.patch  morsemicro_kernel_patches_rel_1_12_4_2024_Jun_11/6.6.x/0010-sdio_18v_quirk.patch 
 cat morsemicro_kernel_patches_rel_1_12_4_2024_Jun_11/6.6.x/*.patch | patch -g0 -p1 -E -d linux/
 mkdir patches
@@ -119,7 +119,7 @@ cd ..
 patch -p1 < patches/debug.h.patch
 patch -p1 < patches/firmware.h.patch
 patch -p1 < patches/morse.h.patch
-curl -L -O https://raw.githubusercontent.com/bsantunes/AHM26108D/refs/heads/main/morse_types.h
+curl -L -O https://raw.githubusercontent.com/bsantunes/AHM26108D_AAEON/refs/heads/main/morse_types.h
 cp morse_types.h linux/drivers/net/wireless/morse/
 ```
 ## 7. Build the Kernel and Driver
